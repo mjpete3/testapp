@@ -91,3 +91,131 @@ Connecting to database specified by database.yml
 Connecting to database specified by database.yml
   [1m[36m (1.7ms)[0m  [1mselect sqlite_version(*)[0m
   [1m[35m (0.9ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-22 19:51:57 -0400
+Connecting to database specified by database.yml
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (2.7ms)
+Compiled home.css  (27ms)  (pid 5178)
+Compiled application.css  (29ms)  (pid 5178)
+Compiled jquery.js  (9ms)  (pid 5178)
+Compiled jquery_ujs.js  (0ms)  (pid 5178)
+Compiled home.js  (104ms)  (pid 5178)
+Compiled application.js  (166ms)  (pid 5178)
+Completed 200 OK in 278ms (Views: 277.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-08-22 19:51:58 -0400
+Served asset /home.css - 200 OK (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-22 19:51:58 -0400
+Served asset /jquery_ujs.js - 200 OK (6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-22 19:51:58 -0400
+Served asset /jquery.js - 200 OK (12ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-08-22 19:51:58 -0400
+Served asset /home.js - 200 OK (3ms)
+
+
+Started GET "/home/show" for 127.0.0.1 at 2013-08-22 19:52:07 -0400
+Processing by HomeController#show as HTML
+Starting
+Connection to ftp.officeally.com created with user: associatedbc
+The send to folder: /outbound exists.
+The receive from folder: /inbound exists.
+  Rendered home/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 1260ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-08-22 19:52:08 -0400
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-22 19:52:08 -0400
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-08-22 19:52:08 -0400
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-22 19:52:08 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/home/show" for 127.0.0.1 at 2013-08-22 19:59:19 -0400
+Processing by HomeController#show as HTML
+Starting
+Connection to ftp.officeally.com created with user: associatedbc
+A general error occured.  Please check your settings. => undefined local variable or method `sftp' for #<HomeController:0x007f1458c3f078>
+  Rendered home/show.html.erb within layouts/application (30.1ms)
+Completed 500 Internal Server Error in 1344ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: 
+    2: <h2>Messages:</h2>
+    3: <% @messages.each do |msg| %>
+    4: 	<%= msg %> <br />
+    5: <% end %>
+  app/views/home/show.html.erb:3:in `_app_views_home_show_html_erb___2311377515802367755_69862682219820'
+
+
+  Rendered /usr/local/share/gems/gems/actionpack-3.2.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (10.7ms)
+  Rendered /usr/local/share/gems/gems/actionpack-3.2.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.8ms)
+  Rendered /usr/local/share/gems/gems/actionpack-3.2.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (28.4ms)
+
+
+Started GET "/home/show" for 127.0.0.1 at 2013-08-22 19:59:36 -0400
+Processing by HomeController#show as HTML
+Starting
+Connection to ftp.officeally.com created with user: associatedbc
+A general error occured.  Please check your settings. => undefined local variable or method `sftp' for #<HomeController:0x007f1458634a20>
+  Rendered home/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 1270ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-22 19:59:37 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-08-22 19:59:37 -0400
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-22 19:59:37 -0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-08-22 19:59:37 -0400
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/home/show" for 127.0.0.1 at 2013-08-22 20:00:18 -0400
+Processing by HomeController#show as HTML
+Starting
+Connection to ftp.officeally.com created with user: associatedbc
+The send to folder: /outbound exists.
+The receive from folder: /inbound exists.
+  Rendered home/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1309ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-08-22 20:00:20 -0400
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-22 20:00:20 -0400
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-22 20:00:20 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-08-22 20:00:20 -0400
+Served asset /home.js - 304 Not Modified (0ms)
