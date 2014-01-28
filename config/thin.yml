@@ -1,3 +1,5 @@
+user: marty
+group: marty
 pid: tmp/pids/testappthin.pid
 address: 0.0.0.0
 timeout: 30
