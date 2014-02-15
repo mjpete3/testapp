@@ -1,0 +1,34 @@
+#!/bin/sh
+
+export GEM_HOME=/usr/local/share
+export GEM_PATH=/usr/local/share/gems
+ 
+BUNDLE_CMD=/bin/bundle
+
+
+APP_PATH="$1"
+PORT="$3"
+CONFIG_PATH="$4"
+
+
+bundle_exec_thin()
+{
+  cd $APP_PATH
+  $BUNDLE_CMD exec thin -C $CONFIG_PATH $1 -o $PORT
+}
+
+
+case "$2" in
+  start)
+    bundle_exec_thin start 
+    ;;
+  stop)
+    bundle_exec_thin stop
+    ;;
+  restart)
+    bundle_exec_thin restart
+    ;;
+  *)
+    echo "Usage: {app path} {start|stop|restart} {port} {config path}"
+    ;;
+esac
