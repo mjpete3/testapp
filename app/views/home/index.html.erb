@@ -1,3 +1,61 @@
 <h2>Test Application</h2>
-<p><%= @message %></p>
-<p>This test app is to prove out that Thin is functioning.</p>
+<p>
+	The display of this page tests the basic configuration of the system.
+	Apache and Phusion Passenger are functioning correctly on the host system.
+	Ruby and Rails are installed and functioning correctly.	
+</p>
+
+<h2>System Information</h2>
+<p>
+	Hostname: <%= @hostname %><br />
+	OS Platform: <%= RUBY_PLATFORM %><br />
+	Local IP Address: <%= @ip_address %><br />
+	Apache Version: <br />
+	Passenger Version:
+</p>
+
+<h2>Rails Platform</h2>
+<p>Rails Version: <%= Rails.version %></p>
+
+<h2>Ruby Platform Information</h2>
+<p>
+	Ruby Platform: <%= RUBY_PLATFORM %><br />
+	Ruby Release:  <%= RUBY_RELEASE_DATE %><br />
+	Ruby Version:  <%= RUBY_VERSION %>
+</p>
+
+<h2>Request Env</h2>
+<p>
+	<table>
+		<tr>
+			<th>Remote Address</th>
+			<td><%= request.remote_ip %></td>
+		</tr>
+			<th>Remote Host</th>
+			<td><%= request.remote_host %></td>
+		<tr>
+		</tr>
+			<th>Request Method</th>
+			<td><%= request.request_method %></td>
+		<tr>
+		</tr>
+			<th>Request URL</th>
+			<td><%= request.original_url %></td>
+		<tr>
+			<th>Server Name</th>
+			<td><%= request.env["SERVER_NAME"]%></td>
+		</tr>
+		<tr>
+			<th>Server Port</th>
+			<td><%= request.env["SERVER_PORT"]%></td>
+		</tr>
+		<tr>
+			<th>Server Protocol</th>
+			<td><%= request.env["SERVER_PROTOCOL"]%></td>
+		</tr>
+		<tr>
+			<th>Server Software</th>
+			<td><%= request.env["SERVER_SOFTWARE"]%></td>
+		</tr>
+	</table>	
+</p>
